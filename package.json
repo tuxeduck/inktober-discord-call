@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/doingandlearning/inktober-discord-call#readme",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "netlify-lambda": "^2.0.1"
   }
 }
