@@ -5,3 +5,5 @@ yarn-error.log*
 *.tsbuildinfo
 .npm
 .eslintcache
+.env
+functions
