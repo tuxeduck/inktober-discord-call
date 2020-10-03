@@ -1,4 +1,3 @@
-console.log("here we go");
 const axios = require("axios");
 const today = new Date();
 
