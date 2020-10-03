@@ -1,10 +1,6 @@
 const axios = require("axios");
 const today = new Date();
 
-process.env.BOT_NAME = "InktoberBot";
-process.env.DISCORD_WEB_HOOK =
-  "https://discordapp.com/api/webhooks/761972410576011265/IOzZvdcFmGyqEb_Q2ZsRSc4UiTM_OrKW1I1iplfYIOrrBpsSWeNsnZQfY-Gi6S9wdJnH";
-
 const openings = [
   "Well, hello there!",
   "Greetings, Earthlings!",
