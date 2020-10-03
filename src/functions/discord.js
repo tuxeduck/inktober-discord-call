@@ -1,4 +1,4 @@
-import axious from "axios";
+const axios = require("axios");
 const today = new Date();
 
 const openings = [
