@@ -101,6 +101,9 @@ exports.handler = async (event, context, callback) => {
     .then(() => {
       callback(null, {
         statusCode: 200,
+        headers: {
+          "Cache-Control": "no-cache",
+        },
         body: "Message sent.",
       });
     })
