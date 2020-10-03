@@ -9,7 +9,7 @@ const openings = [
   "Greetings, Earthlings!",
   "Pens at the ready!",
   "Hope you're ready for some inking!",
-  "Beep! Boop! Time to ink!"
+  "Beep! Boop! Time to ink!",
 ];
 
 const topics = {
@@ -51,7 +51,7 @@ const finishings = [
   "Draw on inkers!",
   "The journey is as important as the destination.",
   "There is no competition - show us what you made.",
-  "1... 2... 3... Ink!"
+  "1... 2... 3... Ink!",
 ];
 
 function constructMessage() {
