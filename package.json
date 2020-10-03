@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "cd functions && npm i",
+    "build": "netlify-lambda build .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
