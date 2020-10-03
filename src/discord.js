@@ -96,8 +96,8 @@ function triggerWebhook() {
   return axios.post(process.env.DISCORD_WEB_HOOK, params);
 }
 
-exports.handler = function (event, context, callback) {
-  triggerWebhook()
+exports.handler = async (event, context, callback) => {
+  return triggerWebhook()
     .then(() => {
       callback(null, {
         statusCode: 200,
