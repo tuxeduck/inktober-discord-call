@@ -1,6 +1,10 @@
 const axios = require("axios");
 const today = new Date();
 
+process.env.BOT_NAME = "InktoberBot";
+process.env.DISCORD_WEB_HOOK =
+  "https://discordapp.com/api/webhooks/761972410576011265/IOzZvdcFmGyqEb_Q2ZsRSc4UiTM_OrKW1I1iplfYIOrrBpsSWeNsnZQfY-Gi6S9wdJnH";
+
 const openings = [
   "Well, hello there!",
   "Greetings, Earthlings!",
@@ -92,9 +96,12 @@ const params = {
   content: constructMessage(),
 };
 
+function triggerWebhook() {
+  return axios.post(process.env.DISCORD_WEB_HOOK, params);
+}
+
 exports.handler = function (event, context, callback) {
-  axios
-    .post(process.env.DISCORD_WEB_HOOK, params)
+  triggerWebhook()
     .then(() => {
       callback(null, {
         statusCode: 200,
