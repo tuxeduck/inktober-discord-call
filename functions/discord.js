@@ -1,3 +1,4 @@
+const axios = require("axios");
 const today = new Date();
 
 const openings = [
@@ -92,8 +93,18 @@ const params = {
 };
 
 exports.handler = function (event, context, callback) {
-  callback(null, {
-    statusCode: 200,
-    body: JSON.stringify(params),
-  });
+  axios
+    .post(process.env.DISCORD_WEB_HOOK, params)
+    .then(() => {
+      callback(null, {
+        statusCode: 200,
+        body: "Message sent.",
+      });
+    })
+    .catch((err) => {
+      callback(null, {
+        statusCode: 400,
+        body: "Message failed with this error: " + err,
+      });
+    });
 };
