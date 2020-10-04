@@ -89,17 +89,16 @@ function getDate() {
 
   return `${day}${ending}`;
 }
-
-async function triggerWebhook() {
-  return axios.post(process.env.DISCORD_WEB_HOOK, params);
-}
-
 exports.handler = (event, context, callback) => {
   const params = {
     username: process.env.BOT_NAME,
     avatar_url: process.env.AVATAR_URL || "",
     content: constructMessage(),
   };
+
+  async function triggerWebhook() {
+    return axios.post(process.env.DISCORD_WEB_HOOK, params);
+  }
 
   triggerWebhook()
     .then(() => {
