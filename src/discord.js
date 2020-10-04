@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config();
 
 const axios = require("axios");
 
@@ -90,17 +90,17 @@ function getDate() {
   return `${day}${ending}`;
 }
 
-const params = {
-  username: process.env.BOT_NAME,
-  avatar_url: process.env.AVATAR_URL || "",
-  content: constructMessage(),
-};
-
 async function triggerWebhook() {
   return axios.post(process.env.DISCORD_WEB_HOOK, params);
 }
 
 exports.handler = (event, context, callback) => {
+  const params = {
+    username: process.env.BOT_NAME,
+    avatar_url: process.env.AVATAR_URL || "",
+    content: constructMessage(),
+  };
+
   triggerWebhook()
     .then(() => {
       callback(null, {
