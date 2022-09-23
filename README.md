@@ -11,8 +11,8 @@ Sends a message to a Discord webhook's channel broadcasting the topic for the da
 The function requires the following envrionment variables:
 
 ```
-BOT_NAME="Inky"
-AVATAR_URL="https://link.to.avatar.jpg"
+BOT_NAME="Sir Inktober McSpooks"
+AVATAR_URL="https://pbs.twimg.com/profile_images/786663388311003137/NwU1GGeL_400x400.jpg"
 DISCORD_WEB_HOOK="https://discordapp.com/api/webhooks/..."
 ```
 
